@@ -1,0 +1,52 @@
+### Create
+POST http://localhost:3000/dogs
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzExMzU2NTl9.KSw_QRrqg2moytRrYMsqjt5Oijxqv_Qq0dIMHCGJ0ko
+Content-Type: application/json
+
+{
+"name": "Pickles ",
+"age": "10 Months",
+"breed": "Border Collie"
+}
+
+### Users create (signup)
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "Jack",
+  "email": "Jack@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### Sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "Jack@test.com",
+  "password": "password"
+}
+
+### Photos create
+POST http://localhost:3000/photos.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjozLCJleHAiOjE2Mjk5OTI4NjR9.G2ExsrDYn3oE0vJkvm4T6Po2GbNpH5cqTEaVPVuK_MA
+Content-Type: application/json
+
+{
+  "name": "Test name",
+  "width": 640,
+  "height": 480
+}
+
+#### UPDATE
+PATCH http://localhost:3000/dogs/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzExMzU2NTl9.KSw_QRrqg2moytRrYMsqjt5Oijxqv_Qq0dIMHCGJ0ko
+Content-Type: application/json
+
+{
+"name": "Pickles ",
+"age": "1 Year",
+"breed": "Border Collie"
+}
